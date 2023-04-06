@@ -1,1 +1,2 @@
-## Nathan Wong's Projects
+# Nathan Wong's Projects
+## Summary of Projects
