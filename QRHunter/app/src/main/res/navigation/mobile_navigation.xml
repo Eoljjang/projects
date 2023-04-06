@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.goblin.qrhunter.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_leaderboardFragment"
+            app:destination="@id/leaderboardFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_mapFragment"
+            app:destination="@id/mapFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_scanFragment"
+            app:destination="@id/scanFragment" />
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_summary"
+        android:name="com.goblin.qrhunter.ui.summary.SummaryFragment"
+        android:label="Summary"
+        tools:layout="@layout/fragment_summary" />
+
+    <fragment
+        android:id="@+id/navigation_add_QRCode"
+        android:name="com.goblin.qrhunter.ui.addQRCode.addQRCodeFragment"
+        android:label="Summary"
+        tools:layout="@layout/fragment_add_qr_code" >
+    <action
+        android:id="@+id/action_add_QRCode_to_navigation_home"
+        app:destination="@id/navigation_home" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_search"
+        android:name="com.goblin.qrhunter.ui.search.SearchFragment"
+        android:label="Search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_search_select_player"
+            app:destination="@id/otherProfileFragment" >
+            <argument
+                android:name="playerId"
+                app:argType="string"
+                android:defaultValue=""
+                />
+
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/leaderboardFragment"
+        android:name="com.goblin.qrhunter.ui.leaderboard.LeaderboardFragment"
+        android:label="Leaderboards"
+        tools:layout="@layout/fragment_leaderboard" >
+        <action
+            android:id="@+id/action_leaderboardFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_leaderboardFragment_to_navigation_rankingListTotalscore"
+            app:destination="@id/rankingListTotalscoreFragment" />
+        <action
+            android:id="@+id/action_leaderboardFragment_to_navigation_rankingListTotalAmount"
+            app:destination="@id/rankingListTotalAmountFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.goblin.qrhunter.ui.map.MapFragment"
+        android:label="Map"
+        tools:layout="@layout/fragment_map" >
+        <action
+            android:id="@+id/action_mapFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/takephotoFragment"
+        android:name="com.goblin.qrhunter.ui.takephoto.TakePhotoFragment"
+        android:label="Take Photo"
+        tools:layout="@layout/fragment_takephoto" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.goblin.qrhunter.ui.profile.ProfileFragment"
+        android:label="My Profile"
+        tools:layout="@layout/fragment_user_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_debugFragment"
+            app:destination="@id/debugFragment" />
+    </fragment>
+
+    <action android:id="@+id/action_navigate_to_profile"
+        app:destination="@id/profileFragment"
+        android:menuCategory="secondary"/>
+
+    <fragment
+        android:id="@+id/rankingListTotalscoreFragment"
+        android:name="com.goblin.qrhunter.ui.leaderboard.RankinglistTotalscoreFragment"
+        android:label="Rankings by Total Score"
+        tools:layout="@layout/fragment_rankbytotalscore" >
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/rankingListTotalAmountFragment"
+        android:name="com.goblin.qrhunter.ui.leaderboard.RankingListTotalAmountFragment"
+        android:label="Rankings by Total Amount"
+        tools:layout="@layout/fragment_rankbytotalamount" >
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/otherProfileFragment"
+        android:name="com.goblin.qrhunter.ui.profile.OtherProfileFragment"
+        android:label="Searched Profile"
+        tools:layout="@layout/fragment_other_profile">
+        <argument
+            android:name="playerId"
+            app:argType="string"
+            android:defaultValue=""
+            />
+
+    </fragment>
+    <fragment
+        android:id="@+id/debugFragment"
+        android:name="com.goblin.qrhunter.ui.debug.DebugFragment"
+        android:label="fragment_debug"
+        tools:layout="@layout/fragment_debug" >
+        <action
+            android:id="@+id/action_debugFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/postFragment"
+        android:name="com.goblin.qrhunter.ui.post.PostFragment"
+        android:label="QR Code's Post"
+        tools:layout="@layout/fragment_post" />
+    <action
+        android:id="@+id/action_global_postFragment"
+        app:destination="@id/postFragment" />
+    <fragment
+        android:id="@+id/alsoFragment"
+        android:name="com.goblin.qrhunter.ui.also.AlsoFragment"
+        android:label="Also Scanned By"
+        tools:layout="@layout/fragment_also" />
+    <fragment
+        android:id="@+id/scanFragment"
+        android:name="com.goblin.qrhunter.ui.scan.ScanFragment"
+        android:label="Scan"
+        tools:layout="@layout/fragment_scan" >
+        <action
+            android:id="@+id/action_scanFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_scanFragment_to_takephotoFragment"
+            app:destination="@id/takephotoFragment" />
+    </fragment>
+
+    <action
+        android:id="@+id/action_global_alsoFragment"
+        app:destination="@id/alsoFragment" />
+
+    <action
+        android:id="@+id/action_global_otherProfileFragment"
+        app:destination="@id/otherProfileFragment" />
+
+</navigation>
