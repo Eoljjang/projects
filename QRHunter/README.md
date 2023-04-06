@@ -27,7 +27,7 @@ QRHunter is a lightweight android mobile application, where users from across th
 * Have fun with the app!
 
 ### Notable Features
-* Search for other players.
+* Supports many different players on various devices.
 * Easily change the color theme of the appto match one's aesthetic choosing.
 * Comment on posts.
 * See leaderboards of all players.
