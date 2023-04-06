@@ -1,8 +1,9 @@
 # QRHunter
 
-![qrhunter-high-resolution-logo-white-on-black-background](https://user-images.githubusercontent.com/90994387/229625118-110fdf7b-40f7-409b-8e95-2589a3ec4562.png)(https://youtu.be/6M3Lm_o_yGo)
+![qrhunter-high-resolution-logo-white-on-black-background](https://user-images.githubusercontent.com/90994387/229625118-110fdf7b-40f7-409b-8e95-2589a3ec4562.png)
 
 ### Video Demonstration
+Please click here to see a short app demo: https://youtu.be/6M3Lm_o_yGo
 
 ### Description
 QRHunter is a lightweight android mobile application, where users from across the world can compete in a geo-catching like format. Scanning QR codes is associated with obtaining points, and players can see where they rank amongst other players. With intuitive and engaging UI/UX, users of all demographics can easily jump into the app and get started collecting QR codes. Released: 04/03/2022.
