@@ -1,42 +1,12 @@
 # Nathan Wong's Projects
-### "ED" Text Editor
-* Release Date: 09/2021
-* Language: Python
-* Description: Simple text editor based off the 1960 "ed" line-based editor for Linux.
+This repository is for a collection of projects. Click into any of the project folders or navigate to the desired link in the table of contents below to view that project along with a description.
+* I've also included the release date next to the link.
 
-### Pong
-* Release Date: 06/2020
-* Language: Python, using PyGame library.
-* Description: Object-oriented approach to re-creating the Pong game. 
-
-### QR-Hunter
-* Release Date: 04/2023
-* Language: Java
-* Description: Geo-catching-like Android application. Main UI/UX designer.
-
-### KL_ProfWebsite
-* Release Date: 07/2023
-* Language: HTML / CSS / Javascript
-* Description:
-- A re-design of a professors biography website. Made to be more modern and visually appealing with extra functionality such as mobile support.
-
-### Psych258_Site
-* Release Date: 06/2023
-* Language: HTML / CSS / Javascript
-* Description:
-- Slight re-design of a course website. Minor changes / QoL but no major re-design.
-
-### SignUp Page
-* Release Date: 07/2023
-* Language: HTML / CSS / Javascript
-* Description:
-- Creating a sign-up page with CSS forms. 
-- Practicing styling, input validation.
-
-### adminDashboard
-* Release Date: 07/2023
-* Language: HTML / CSS
-* Description:
-- Creating a dashboard page containing one's projects.
-- Used CSS grid as main layout design.
-- Is dynmically responsive to different screen sizes.
+## Table of Contents
+* ### ["ED" Text editor](https://github.com/Eoljjang/projects/tree/main/ED_Text_Editor) 09 / 2021
+* ### [Pong](https://github.com/Eoljjang/projects/tree/main/Pong) 06 / 2020
+* ### [QR-Hunter](https://github.com/Eoljjang/projects/tree/main/QRHunter) 04 / 2023
+* ### [KL_ProfWebsite](https://github.com/Eoljjang/projects/tree/main/KL_ProfWebsite) 07 / 2023
+* ### [PSYCH_258_Website](https://github.com/Eoljjang/projects/tree/main/PSYCH258_Site) 06 / 2023
+* ### [Signup Page](https://github.com/Eoljjang/projects/tree/main/signUpPage) 07 / 2023
+* ### [adminDashboard](https://github.com/Eoljjang/projects/tree/main/adminDashboard) 07 / 2023
