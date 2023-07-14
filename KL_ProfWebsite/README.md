@@ -26,4 +26,6 @@ Known Bugs:
 
 ## Preview
 * Original website: https://sites.ualberta.ca/~kloepelm/index.html
-* *Re-designed website:* http://htmlpreview.github.io/?https://github.com/Eoljjang/Odin_Project/blob/main/MiniProjects/KL_ProfWebsite/index.html
+* *Re-designed website:* https://htmlpreview.github.io/?https://github.com/Eoljjang/projects/blob/main/KL_ProfWebsite/index.html
+
+  
