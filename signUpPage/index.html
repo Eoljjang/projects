@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <!-- Background image - Hook -->
+    <div class="background">
+        <img src="images/background.jpg" id="bgImg" alt="desk">
+    </div>
+
+
+    <!-- Content -->
+    <div class="content">
+        <div class="header">
+            <h1>You know you need something like this in your life to help you realize your deepest dreams.</h1>
+            <h1 id="hook">You <i>know</i> you want to,</h1>
+            <h1 id="title">Lets do this.</h1>
+        </div>
+        
+        <form action="" method="" id="signupForm">
+            <div id="col1">
+                <div class="input-box">
+                    <span class="details">First Name: *</span>
+                    <input type="text" id="firstName" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Last Name: *</span>
+                    <input type="text" id="lastName" required>
+
+                </div>
+                <div class="input-box">
+                    <span class="details">Email:</span>
+                    <input type="text" id="email">
+
+                </div>
+            </div>
+
+            <div id="col2">
+                <div class="input-box">
+                    <span class="details">Phone Number:</span>
+                    <input type="number" id="phoneNumber">
+                </div>
+                <div class="input-box">
+                    <span class="details">Password: *</span>
+                    <input type="password" id='password' required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Confirm Password: *</span>
+                    <input type="password" id="confirmPassword" required>
+                </div>
+            </div>    
+            <span id="snackbar-invalid">Passwords do not match!</span>           
+        </form>
+
+            <!-- Extra items -->
+        <div class="extra">
+            <input type="submit" form="signupForm" value="Create Account" id="createBtn"> <!-- This is the "Create account" button (can be used outside of form)-->
+            <div id="alreadyHave">Already have an account? <a href="">Log In</a></div>
+        </div>
+        <span id="snackbar">Account Created!</span>
+        
+    </div>
+
+</body>
+</html>

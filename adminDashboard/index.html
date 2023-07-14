@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="grid-container">
+        <div class="sidebar">
+            <ul class="nav">
+                <li id="logo"> <img src="images/dashboardIcon.svg" alt="" class="icon"> Dashboard</li>
+                <li>Home</li>
+                <li>Profile</li>
+                <li>Messages</li>
+                <li>History</li>
+                <li>Tasks</li>
+                <li>Communities</li>
+            </ul>
+
+            <ul class="settings">
+                <li>Settings</li>
+                <li>Support</li>
+                <li>Privacy</li>
+            </ul>
+        </div>
+
+        <div class="header"> <!-- Flex -->
+            
+            <div> <!-- Also flex -->
+                <img src="images/search.svg" alt="" class="icon">
+                <input id='search' type="text">
+            </div>
+
+
+            <div> <!-- Also flex -->
+                <img src="images/notification.svg" alt="" class="icon">
+                <img src="images/profile.png" alt="" class="icon">
+                <span>Nathan Wong</span>
+            </div>
+
+        </div>
+
+        <div class="action-tab"> <!-- Flex -->
+            <div class="greeting">
+                <img class="icon"src="images/profile.png" alt="">
+                <div id="message">Hi there, Nathan (@Eoljjang).</div>
+            </div>
+
+            <div class="actionBtns"> <!-- So that it sticks to the right of the header, is also flex. -->
+                <button>News</button>
+                <button>Upload</button>
+                <button>Share</button>
+            </div>
+
+        </div>
+
+        <div class="content">
+            <div class="project-cards">
+                <div class="card">
+                    <span class="cardTitle">Project 1</span>
+                    <div class="cardContent">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi reprehenderit libero placeat doloremque laudantium, sequi corrupti nihil voluptates reiciendis deleniti.</div>
+                </div>
+                <div class="card">
+                    <span class="cardTitle">Project 2</span>
+                    <div class="cardContent">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat officia accusantium quo placeat velit perspiciatis consequatur ducimus laborum nostrum similique.t</div>
+                </div>
+                <div class="card">
+                    <span class="cardTitle">Projet 3</span>
+                    <div class="cardContent">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque illum in similique vero. Molestias impedit, doloremque nihil sint obcaecati ullam!</div>
+                </div>
+                <div class="card">
+                    <span class="cardTitle">Project 4</span>
+                    <div class="cardContent">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia tenetur officiis error enim nam porro provident? Rerum minima hic corporis.</div>
+                </div>
+                <div class="card">
+                    <span class="cardTitle">Project 5</span>
+                    <div class="cardContent">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde, iste quibusdam. Commodi voluptatem, cupiditate consequuntur dolor obcaecati quos eveniet? Sequi!</div>
+                </div>
+                <div class="card">
+                    <span class="cardTitle">Project 6</span>
+                    <div class="cardContent">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur delectus nulla ipsam facere? Culpa odio, quae et tenetur neque dolor.</div>
+                </div>
+            </div>
+    
+            <div class="announcements">
+                <div class="sideCard">
+                    <span class="cardTitle">Announcements</span>
+                    <div class="cardContent">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum suscipit, at exercitationem totam beatae praesentium ea?</div>  
+                    <div class="cardContent">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo quam qui eum. Quis, libero molestias.</div>  
+                    <div class="cardContent">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id, ipsa ...</div>
+                </div>
+            </div>
+
+            <div class="friends">
+                <div class="sideCard" id="friendList">
+                    <span class="cardTitle">Friends</span>
+                    <div class="cardContent"><img src="images/friend1.png" alt="" class="icon">YEGFoody101 <img src="images/online.png" alt="" class="icon"></div>
+                    <div class="cardContent"><img src="images/friend2.png" alt="" class="icon"> Creature1Crucial <img src="images/online.png" alt="" class="icon"></div> 
+                    <div class="cardContent"><img src="images/friend3.png" alt="" class="icon"> Le-Duck00</div> 
+                    <div class="cardContent"><img src="images/friend4.png" alt="" class="icon"> Quaxly-mon123</div> 
+                    <div class="cardContent">...</div>
+                </div>
+            </div>
+
+            <div class="filler"></div>
+        </div>
+
+        <div class="footer">
+            <div>Developed by Nathan Wong 07/2023</div>
+            <div><a href="https://github.com/Eoljjang" target="_blank">Github</a></div>
+        </div>
+
+
+    </div>
+    
+</body>
+</html>

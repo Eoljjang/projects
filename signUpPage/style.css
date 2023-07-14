@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto Mono');
+/* For variables */
+:root{
+    --bg-color: #e0e0eb;
+    --form-color: #f0f0f5;
+    --accent-green: #b5e3c3;
+    --accent-gray: #888888;
+    --accent-blue: #80aaff;
+    --accent-red: #ff9999;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Roboto Mono";
+    height: 100vh;
+    display: flex;
+}
+
+a{
+    color: var(--accent-blue);
+}
+
+/* Background */
+#bgImg{
+    height: 100vh;
+}
+
+/* Content */
+.content {
+    width: 100vw;
+    background-color: var(--bg-color);
+    border-left: 5px solid var(--accent-gray);
+}
+
+.header {
+    margin: 30px;
+    max-width: 700px; /* I don't want text to extend too long */
+    /* Get text to wrap;
+    width: calc(50vw);
+    max-width: 50%;
+    */
+}
+
+#hook{
+    margin-top:30px;
+    font-size: 26px;
+}
+
+#title{
+    font-size: 26px;
+}
+
+/* Form */
+form{
+    background-color: var(--form-color);
+    height: fit-content;
+    display:flex;
+}
+
+form .input-box{
+    display:flex;
+    flex-direction: column;
+}
+
+#col1, #col2{
+    margin: 20px 30px 20px 30px;
+
+}
+
+.input-box{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.input-box .details{
+    margin-bottom: 10px;
+}
+
+input{
+    font-family: inherit;
+    font-size: 18px;
+    padding: 8px;
+    border-radius: 6px;
+    border: 3px solid var(--bg-color);
+    outline: none;
+}
+
+input:focus{
+    border: 3px solid var(--accent-blue);
+}
+
+input:focus:invalid{
+    border: 3px solid var(--accent-red);
+}
+
+.invalid-input{ /* toggle this state only if submitted incorrectly */
+    border: 3px solid var(--accent-red);
+}
+
+
+/* Extra */
+.extra{
+    margin: 20px 0 0 30px;
+}
+
+#createBtn,
+#alreadyHave {
+    font-family: inherit;
+}
+
+#createBtn {
+    background-color: var(--accent-green);
+    padding: 5px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 3px solid var(--accent-green);
+    box-shadow: 5px 5px var(--accent-gray);
+    cursor: pointer;
+}
+
+#snackbar {
+    visibility: hidden;
+    color: black;
+    background-color: var(--accent-blue);
+    font-size:14px;
+    min-width: 150px;
+    margin-left: -125px; /* Makes it centered on screen */
+    border-radius: 20px;
+    padding: 16px;
+    text-align: center;
+    left: 50%;
+    bottom: 30px;
+    z-index: 999; /* Puts it on top of everything else */
+    position: fixed; /* Always shows it at the bottom of the screen */
+}
+
+#snackbar-invalid {
+    visibility: hidden;
+    color: black;
+    background-color: var(--accent-red);
+    font-size:14px;
+    min-width: 150px;
+    margin-left: -125px; /* Makes it centered on screen */
+    border-radius: 20px;
+    padding: 16px;
+    text-align: center;
+    left: 50%;
+    bottom: 30px;
+    z-index: 999; /* Puts it on top of everything else */
+    position: fixed; /* Always shows it at the bottom of the screen */
+}
+
+/* This will be activated when the snackbar's class is 'show' which will be added through JS */
+#snackbar.show,
+#snackbar-invalid.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+  
+  /* Animations for fading in and out */
+  @keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }

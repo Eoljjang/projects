@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="980"
+   height="980"
+   viewBox="0 0 259.29167 259.29167"
+   version="1.1"
+   id="svg379"
+   inkscape:version="1.1.2 (b8e25be833, 2022-02-05)"
+   sodipodi:docname="FDkl3.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview381"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     width="980mm"
+     units="px"
+     inkscape:zoom="0.75544332"
+     inkscape:cx="422.93047"
+     inkscape:cy="513.6057"
+     inkscape:window-width="1920"
+     inkscape:window-height="1057"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs376" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <circle
+       style="fill:#999999;stroke-width:0.264583"
+       id="path708"
+       cx="129.76237"
+       cy="129.76237"
+       r="129.41214" />
+    <circle
+       style="fill:#999999;stroke-width:0.264583"
+       id="circle710"
+       cx="129.76237"
+       cy="129.76237"
+       r="129.41214" />
+    <g
+       transform="matrix(0.02799077,0,0,-0.02799077,-18.096757,271.16099)"
+       fill="#0000c0"
+       stroke="none"
+       id="g896">
+      <path
+         d="M 3288,7661 2690,7066 V 4573 2080 h 2068 2067 l 600,600 600,600 H 5957 3890 v 1155 c 0,635 2,1155 4,1155 2,0 455,-452 1007,-1005 L 5904,3580 h 770 l 771,1 -705,696 c -388,383 -883,874 -1100,1090 l -395,394 1090,1084 1090,1084 -758,1 H 5910 L 4902,6926 3895,5922 l -5,1167 -5,1166 z"
+         id="path894" />
+    </g>
+    <g
+       transform="matrix(0.02799077,0,0,-0.02799077,-18.096757,271.16099)"
+       fill="#0000c0"
+       stroke="none"
+       id="g1013">
+      <path
+         d="M 3288,7661 2690,7066 V 4573 2080 h 2068 2067 l 600,600 600,600 H 5957 3890 v 1155 c 0,635 2,1155 4,1155 2,0 455,-452 1007,-1005 L 5904,3580 h 770 l 771,1 -705,696 c -388,383 -883,874 -1100,1090 l -395,394 1090,1084 1090,1084 -758,1 H 5910 L 4902,6926 3895,5922 l -5,1167 -5,1166 z"
+         id="path1011" />
+    </g>
+  </g>
+</svg>

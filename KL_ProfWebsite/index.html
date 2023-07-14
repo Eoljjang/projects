@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <!-- 1) Header -->
+    <div id="header" class="secondary">        
+        <div id="title">
+            <div id="name" class="headerTextColor">Karsten Loepelmann (He/Him)</div>
+            <div id="department" class="accent">Department of Psychology</div>
+        </div>
+    </div>
+
+    <!-- Success message when user clicks on icon -->
+    <span id="snackbar" class="secondary accent">Copied!</span>
+
+    <!-- 2) Content -->
+    <div id="content">
+        <!-- 3) Profile -->
+        <div id="profile">
+            <img id="pfp" src="images/pfpCircle.jpg">
+            <div id="infoContainer">
+                <img class="icon" id="phone" src="icons/phone.png">
+                <img class="icon" id="email" src="icons/email.png">
+                <a href="https://www.linkedin.com/in/karsten-loepelmann-5020481b/?originalSubdomain=ca" target="_blank">
+                    <img class="icon" src="icons/linkedIN.png"> 
+                </a>
+            </div>
+        </div>
+        
+        <!-- 4) About Me -->
+        <div id="aboutMe" class="textBlurb textColor">
+            <h1>About Me <img class="icon" id="flag" src="icons/flag.png"></h1>
+            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eu pellentesque mauris, vel efficitur turpis. 
+                Duis aliquet congue fringilla. Cras eu ante accumsan, 
+                tincidunt diam ac, porttitor quam. Pellentesque quam quam, blandit sed semper ac, ullamcorper quis neque. 
+                Phasellus varius libero erat, id volutpat mauris porta nec. Morbi quam ante, molestie ac consequat eget, accumsan nec nisi. 
+                Donec nunc elit, interdum ultricies nisl vitae, finibus tincidunt nunc. Proin consequat nec elit a gravida. Praesent egestas mi finibus odio 
+                consectetur convallis. Suspendisse pulvinar aliquet tincidunt. Suspendisse auctor vel dolor consectetur fermentum. Aliquam erat volutpat. 
+                Phasellus iaculis at magna a efficitur.</div>
+        </div>
+
+        <!-- 5) Teaching Awards -->
+        <div id="awards" class="textBlurb textColor">
+            <h1>Awards</h1>
+            <ul>
+                <li>William Hardy Alexander Award for Excellence in Undergraduate Teaching, 2020</li>
+                <li>Faculty of Science Instructor of the month, March, 2017</li>
+                <li>Kathleen W. Klawe Prize for Excellence in Teaching of Large Classes, 2014</li>
+                <li>Faculty of Science Instructors of Distinction Honour Roll, 2013, 2014</li>
+                <li>Interdepartmental Science Students' Society Instructor Appreciation award 2013, 2015, 2016</li>
+                <li>“Celebrated” for teaching, AASUA, 2007</li>
+                <li>Delta Chi fraternity Teacher Excellence Award, 2003</li>
+                <li>Department of Psychology Teaching Award, 2002</li>
+            </ul>
+        </div>
+
+        <!-- 6) Extra Blurbs -->
+        <div id="moreLinks" class="textBlurb textColor">
+            <h1>More Links</h1>
+            <div id="moreLinks_1">
+                <button onClick="window.open('https://sites.ualberta.ca/~kloepelm/courses.html', '_blank')" class="btnBlurb textColor">Courses Taught</button>
+                <button onClick="window.open('http://whyarentyoustudying.blogspot.com/', '_blank')" class="btnBlurb textColor">W.A.Y.S Blog</button>
+                <button onClick="window.open('https://sites.ualberta.ca/~kloepelm/learnres.html', '_blank')" class="btnBlurb textColor">Learning Resources</button>
+            </div>
+
+            <div id="moreLinks_2">
+                <button onClick="window.open('https://sites.ualberta.ca/~kloepelm/faq.html', '_blank')" class="btnBlurb textColor">FAQ</button>
+                <button onClick="window.open('https://sites.ualberta.ca/~kloepelm/teaching.pdf', '_blank')" class="btnBlurb textColor">Teaching Dossier</button>
+                <button onClick="window.open('https://mastodon.online/@kloepelm', '_blank')" class="btnBlurb textColor">Mastadon Profile</button>
+            </div>
+        </div>
+
+    
+    </div>
+
+    <!-- ) Footer -->
+    <div id="footer" class="secondary">
+
+        <div id="fImages">
+            <img src="images/uofaLogo.png">
+            <img src="images/htmlLogo.png">
+            <img src="images/cssLogo.gif">
+            <img src="images/loveAlberta.jpeg">
+        </div>
+
+        <div id="footerText" class="headerTextColor">
+            Developed by Nathan Wong 
+            <a class="accent" href="https://github.com/Eoljjang" target="_blank">[GitHub]</a>
+            <span id=devEmail class="accent"><u>[Email]</u></span>
+        
+        </div>
+    </div>
+    
+
+    
+</body>
+</html>
