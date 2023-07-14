@@ -11,4 +11,4 @@
 * Clicking on a link will open a new tab, rather than open in the current tab.
 
 ## Preview:
-* Visit this link: http://htmlpreview.github.io/?https://github.com/Eoljjang/Odin_Project/blob/main/MiniProjects/PSYCH258_Site/index.html
+* Visit this link: https://htmlpreview.github.io/?https://github.com/Eoljjang/projects/blob/main/PSYCH258_Site/index.html
