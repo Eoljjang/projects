@@ -3,6 +3,8 @@
 ## Preview
 * Original website: https://sites.ualberta.ca/~kloepelm/index.html
 * *Re-designed website:* https://htmlpreview.github.io/?https://github.com/Eoljjang/projects/blob/main/KL_ProfWebsite/index.html
+
+<img src="https://github.com/Eoljjang/projects/blob/main/KL_ProfWebsite/images/Screen%20Shot%202023-07-14%20at%203.06.09%20PM.png">
   
 ## Changes
 Design Changes:
