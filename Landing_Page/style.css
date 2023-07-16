@@ -1,0 +1,192 @@
+body {
+    font-family: Roboto, 'Helvetica Neue', sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    flex-shrink: 1;
+}
+
+/* 1) Header */
+.header {
+    display: flex;
+    flex-direction: column;
+    background-color: #1F2937;
+    padding: 30px 200px 70px 200px;
+
+}
+.nav {
+    display: flex;
+    flex-wrap: wrap; /* Disallows for horizontal scrolling */
+    /* Pushes items to the left & right */
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 12px;
+}
+
+.nav p{
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+    font-size: 24px;
+    color: #F9FAF8;
+
+}
+
+.nav ul{
+    display: flex;
+    padding: 0;
+    margin: 0;
+    gap: 12px;
+    list-style: none;
+    color: #E5E7EB;
+
+}
+
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.content .text{
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+
+    margin-top: 24px;
+    flex-wrap: wrap;
+    
+}
+.content .text .title {
+    font-size: 48px;
+    font-weight: bolder;
+    color: #F9FAF8;
+}
+
+.content .text .description {
+    font-size: 14px;
+    color: #E5E7EB;
+    margin-top: 8px;
+}
+
+.content .text button {
+    background-color: #3882F6;
+    width: fit-content;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer; /* Clickable */
+    border: 1px solid #3882F6; /* Removes the ugly default shadow on the button */
+    margin-top: 8px;
+}
+
+.content .image{
+    color: #E5E7EB;
+    background: gray;
+    padding: 90px 100px;
+    flex-shrink: 0;
+}
+
+/* 2) Information */
+.information{
+    display: flex;
+    flex: 1; /* So the room it takes up is dynamic. */
+    flex-direction: column;
+    text-align: center;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    
+}
+
+.information .items {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    gap: 60px; /* Can use gap since its a flexbox, and its items are flex items. */
+    margin-top: 24px;
+    
+}
+
+.information .item{
+    color: grey;
+    width: 150px;
+
+}
+
+.information img{
+    height: 150px;
+    width: 150px;
+    border: 5px solid blue;
+    border-radius: 10px;
+}
+
+/* 3) Quote */
+.quote{
+    display:flex;
+    flex-direction: column;
+    background-color: #E5E7EB;
+    margin-top: 48px;
+    
+    align-items: center;
+    justify-content: center;
+}
+
+.quote blockquote{
+    color: #1F2937;
+    font-size: 36px;
+    font-style: italic;
+    font-weight:lighter;
+    padding: 30px 150px 30px 150px;
+}
+.quote blockquote cite {
+    display: block;
+    text-align: right;
+}
+
+/* 4) Sign-up Section */
+.signup{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3882F6;
+    margin: 48px 350px;
+    border-radius: 8px;
+    
+}
+
+.signup .sellingPoints{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    padding: 36px 18px;
+    
+}
+.signup .main{
+    font-weight: bolder;
+    font-size: 24px;
+    color: #F9FAF8;
+}
+.signup .second{
+    color: #E5E7EB;
+    font-style: italic;
+}
+
+.signup button{
+    background-color: #3882F6;
+    width: fit-content;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer; /* Clickable */
+    border: 3px solid #F9FAF8; /* Removes the ugly default shadow on the button */
+    color: #F9FAF8;
+}
+
+/* 5) Footer */
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: #1F2937;
+    color: #E5E7EB;
+}

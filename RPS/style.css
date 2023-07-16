@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    background-color: #f5f5dd;
+}
+
+.title {
+    text-align: center;
+    font-size: 32px;
+    margin: 12px;
+    font-weight: 700;
+
+}
+.moves{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 12px;
+}
+
+#rock, #paper, #scissors {
+    padding: 25px 75px 25px 75px;
+    cursor: pointer; /* Clickable */
+    background-color: rgb(127, 234, 255);
+    border: 3px solid #000000; /* Removes the ugly default shadow on the button */
+    font-size: 24px;
+}
+
+#round_result{
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size:24px;
+    margin: 12px;
+}
+
+.scores {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 32px;
+
+}
+
+#final_result {
+    text-align: center;
+    font-size: 34px;
+}
+
