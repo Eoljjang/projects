@@ -10,3 +10,6 @@ This repository is for a collection of projects. Click into any of the project f
 * ### [PSYCH_258_Website](https://github.com/Eoljjang/projects/tree/main/PSYCH258_Site) 06 / 2023
 * ### [Signup Page](https://github.com/Eoljjang/projects/tree/main/signUpPage) 07 / 2023
 * ### [adminDashboard](https://github.com/Eoljjang/projects/tree/main/adminDashboard) 07 / 2023
+* ### [Etch-a-Sketch](https://github.com/Eoljjang/projects/tree/main/sketch) 06 / 2023
+* ### [Rock Paper Scissors](https://github.com/Eoljjang/projects/tree/main/RPS) 06 / 2023
+* ### [Landing Page](https://github.com/Eoljjang/projects/tree/main/Landing_Page) 05 / 2023
