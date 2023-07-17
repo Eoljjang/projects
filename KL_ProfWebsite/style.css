@@ -8,6 +8,7 @@ body {
     height: 100vh;
     background: #EBEBEB; /* primary color */
 }
+
 .accent {
     color: #829CD0;
 }
@@ -231,7 +232,7 @@ button { /* flexed just so text can be centered properly */
     margin-top: 24px;
 }
 
-/* MOBILE SUPPORT: If viewport is < 531px */
+/* 7) MOBILE SUPPORT: If viewport is < 531px */
 @media (max-width: 530px){
     /* PFP is adjusted for alignment */
     #profile #pfp {
