@@ -19,4 +19,4 @@ There are also remaining folders that are created but would be empty in this exa
 6. Documents
 7. Packages
 
-![Demo](https://github.com/Eoljjang/projects/blob/main/fileOrganizer/demo.mov)
+![Please click here to see a video demo.](https://youtu.be/MkVcKM2lJnA)
