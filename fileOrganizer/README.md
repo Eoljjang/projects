@@ -20,3 +20,7 @@ There are also remaining folders that are created but would be empty in this exa
 7. Packages
 
 Please click here to see a short demo: https://youtu.be/MkVcKM2lJnA
+
+### Other notes
+- Same file names may produce conflict (if they were in different directories say).
+- Tested on macOS, but the logic should apply to windows -> The downloads path just has to be changed to "c::" to support windows.
