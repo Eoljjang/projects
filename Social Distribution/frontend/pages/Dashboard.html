@@ -1,0 +1,160 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Homepage</title>
+        <link rel="stylesheet" href="../static/social/stylesheets/homepage.css"> <!-- For development purposes, can delete it later. -->
+        <link rel="stylesheet" href="../static/social/stylesheets/main.css"> <!-- ^ -->
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <!--> <script type="module" src="../scripts/home.js" defer></script> <!-- Must be at end of head. For development purposes only, comment out. -->
+
+    </head>
+    <body>
+        <!-- Header always sticks to top of screen -->
+        <div class="header">
+            <div class="appLogo">Beeg Yoshi</div>
+            <ul class="navLinks">
+                <li><a href="">Homepage</a></li>
+                <li><a href="./notificationPage.html">Notifications</a></li>
+                <li><a href="./socialPage.html">Social</a></li>
+                <li><a href="./userProfile.html">My Profile</a></li>
+            </ul>
+        </div>
+
+        <!-- Will have 3 columns. The outer 2 are blank for now, but can add stuff in the future (IE: Future modulartiy)-->
+        <div class="content">
+            <div class="col1">
+            </div>
+
+            <div class="stream">
+                <button data-open-modal class="postBtn">
+                    +    
+                </button>                
+            </div>
+
+            <div class="col3">
+            </div>
+        
+        </div>
+
+        <!-- Modal for creating a post -->
+        <dialog data-modal class="createPostModal">
+            <button data-close-modal id="closePostModal">Cancel</button>
+            <div class="modalHeading">     
+                <h1>Create Post</h1>
+            </div>
+            <div class="modalEnterText">
+            <h3>Title</h3>
+                <input type="text" id="postTitle" name="postTitle" required>
+                <h3>Description</h3>
+                <input type="text" id="postDescription" name="postDescription" required>
+
+
+                <h3>Options</h3>
+                <div class="options">
+                    <!-- <label style="display: block;" for="content-type">Choose content type</label> -->
+                    <select name="content-type" id="content-type">
+                        <option value="" selected disabled>Content Type</option>
+                        <option value="text/plain">Plain Text</option>
+                        <option value="image">Image</option>
+                    </select>
+                    <!-- <label for="categories">Choose categories</label> -->
+                    <select name="categories" id="categories">
+                        <option value="" selected disabled>Category</option>
+                        <option value="web">Web</option>
+                        <option value="tutorial">Tutorial</option>
+                        <option value="tutorial and web">Web and Tutorial</option>
+                    </select>
+                    <!-- <label for="categories">Choose visibility</label> -->
+                    <select name="visibility" id="visibility">
+                        <option value="" selected disabled>Visibility</option>
+                        <option value="PUBLIC">Public</option>
+                        <option value="FRIENDS">Friends Only</option>
+                    </select>
+                </div>
+                <div class="unlistedOption">
+                    <input type="checkbox" id="unlistedCheckbox">
+                    <label for="unlistedCheckbox">Unlisted?</label>
+                </div>
+
+                <h4>Content</h4>
+                <textarea id="postContent" name="postContent" maxlength="500" placeholder="Enter Text (Max 500 characters)"></textarea>
+                <div id="imagePreviewContainer" style="display: none;">
+                    <img id="imagePreview" src="" alt="Image Preview" style="max-width: 100%; max-height: 300px; display: none;">
+                    <div id="imageInputContainer" style="display: none;">
+                        <input type="file" id="imageInput" accept="image/png, image/jpeg, image/webp">
+                        <img id="imageInputPreview" src="" alt="Image Preview" style="max-width: 100%; max-height: 350px; display: none;">
+                    </div>
+                </div>
+            </div>
+
+            <div class="modalFooter">
+                <ul>
+                    <li><img src="../images/attachImgIcon.png" alt=""></li>
+                    <li><img src="../images/githubLogo.png" alt=""></li>
+                    <li><img src="../images/privacyIcon.png" alt=""></li>
+                </ul>
+                <button id="submitPostBtn">Post</button>
+            </div>
+        </dialog>
+
+        <!-- Footer -->
+        <div class="footer">
+            <ul class="footerLinks">
+                <li><a href="">Link 1</a></li>
+                <li><a href="">Link 2</a></li>
+                <li><a href="">Link 3</a></li>
+                <button class="log-out" id="logoutBtn">Log out</button>
+            </ul>
+        </div>
+
+        
+        <div class="confirmation-dialog" id="confirmationDialog">
+            <p>Are you sure you want to delete this post?</p>
+            <button id="confirmDelete">Yes</button>
+            <button id="cancelDelete">No</button>
+        </div>
+        <div class="edit-modal" id="editModal">
+            <h4>Edit Post</h4>
+            <textarea id="editPostContent" maxlength="500"></textarea>
+            <div>
+                <button id="saveChanges">Save Changes</button>
+                <button id="cancelEdit">Cancel</button>
+            </div>
+        </div>
+
+        <dialog data-modal id="commentModal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h4 style="margin-bottom: 20px;">Comments:</h4>
+                <ul id="commentList">
+                    <li class="comment-item">
+                        <strong>Author's Name</strong>
+                        <p>Comment content here...</p>
+                        <button class="like-btn">Like</button>
+                    </li>
+                </ul>
+                <div class="comment-input-section">
+                    <input type="text" id="userComment" maxlength="250" placeholder="Enter text (max 250 char)" />
+                    <button id="submitCommentBtn">Comment</button>
+                </div>
+            </div>
+        </dialog>
+        <div class="friend-share-container">
+            <div class="modal-content">
+                <h3>Share this post to..</h3>
+                <span class="friend-modal-close">&times;</span>
+            <ul class="list-items">
+                <li class="item">
+                    <span class="checkbox">
+                        <i class="fa-solid fa-check check-icon"></i>
+                    </span>
+                    <span class="item-text">Friend 1</span>
+                </li>
+            </ul>
+        </div>
+        </div>
+    </body>
+    </html>

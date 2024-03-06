@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="../static/social/stylesheets/adminPage.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="../scripts/adminPage.js"></script>
+</head>
+<body>
+    <button id="backButton">Back to Dashboard</button>
+    <div class="container">
+        <div class="user-list inactive-users">
+            <h2>Inactive Users</h2>
+            <ul id="inactiveUserList">
+            </ul>
+        </div>
+        <div class="user-list active-users">
+            <h2>Active Users</h2>
+            <ul id="activeUserList">
+            </ul>
+        </div>
+    </div>
+    <div class="user-list active-users">
+        <h2>External node connection</h2>
+        <ul id="nodeConnectionList">
+        </ul>
+    </div>
+    <div id="editUserModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">×</span>
+            <form id="editUserForm">
+                <h2>Edit User</h2>
+                <input type="hidden" id="userId">
+                <div class="form-group">
+                    <label for="userName">Name:</label>
+                    <input type="text" id="userName" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="Github">Github:</label>
+                    <input type="Github" id="Github" name="Github" required>
+                </div>
+                <div class="form-group">
+                    <label for="Password">Password:</label>
+                    <input type="pwd" id="Password" name="Password" required>
+                </div>
+
+                <button type="submit" class="save-changes-button">Save Changes</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

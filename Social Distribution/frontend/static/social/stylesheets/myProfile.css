@@ -1,0 +1,141 @@
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+.cover{
+    height: 120px;
+    background-color: var(--accentColor);
+}
+
+#pfp {
+    position: relative;
+    width: 225px;
+    height: auto;
+
+    left: 50%;
+    top: 120px; /* Height of cover = in the middle */
+    transform: translate(-50%, -50%);
+
+    clip-path: circle();
+}
+
+.content .stream{
+    padding-top: 5rem;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+hr.divider {
+    border-top: 1px solid var(--darkText);
+    width: 80%; /* of the stream column */
+    margin-top: 1rem; /* spaces out both top & bottom */
+    margin-bottom: 1rem;
+}
+
+/* User Information */
+.content .stream .userInfo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/** Edit profile modal **/
+#confirmEditBtn{
+    position: absolute;
+    right: 1rem;
+    background: #99e6ff;
+    border-radius: 12px;
+    width: fit-content;
+    padding: 6px;
+    border: 1px solid #999;
+    border: 1px solid #999;
+    box-shadow: 2px 2px #999;
+}
+
+#githubLogo{
+    width: 45px;
+    height: auto;
+}
+
+.stream #bio{
+    width: 50%; /* Takes up half of the stream column */
+    text-align: center;
+    margin-top: 1rem; /* Space out biography */
+}
+
+.stream #edit-profile-btn{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: var(--accentLight);
+    width: fit-content;
+    border-radius: 8px;
+    padding: 6px;
+}
+
+#editBio{
+    width: 100%;
+    height: 100px;
+    resize: none;
+
+    border-radius: 6px;
+    padding: 6px;
+    border: 1px solid var(--darkText);
+}
+
+.activity-feed {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.activity-card {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.activity-title {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.activity-date {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.activity-card ul {
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+#loadMoreBtn {
+    display: block;
+    padding: 10px 15px;
+    text-align: center;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-size: 1em;
+    margin-bottom: 30px;
+}
+
+
+
+
+
+
+

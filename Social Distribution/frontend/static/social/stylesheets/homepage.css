@@ -1,0 +1,594 @@
+/* CSS exclusive to the homepage */
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+.content .stream .postBtn{
+    position: fixed;
+    bottom: 75px;
+    right: 15%; /* Ensures it sits at the right spot no matter screen size */
+    width: 70px;
+    height: 60px;
+
+    background: #99e6ff;
+    box-shadow: 2px 2px #999;
+    border: 1px solid var(--darkText);
+    color: var(--darkText);
+    border-radius: 16px;
+
+    font-size: 36px;
+    text-align: center;
+    z-index: 100%; /* Always on top */
+}
+
+/* Post. By default its hidden but you add it in if there's posts to show. */
+.post {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: space-between;
+    width: 80%;
+    height: fit-content; /* Size of each post will be the height of the content */
+    
+    margin-bottom: 2rem;
+    padding: 16px;
+    padding-bottom: 10px;
+    
+    border: 2px solid var(--darkText); /* FOR VISUAL PURPOSES ONLY, DELETE LATER */
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+
+.post .postPfp {
+    width: 60px;
+    height: 55px;
+    flex: 0 0 10%; /* Occupies 10% of the post container */
+    clip-path: circle();
+}
+
+.post .postContent{
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 70%;
+    padding: 8px;
+    padding-bottom: 0px;
+    margin-top: 10px;
+    word-wrap: break-word;
+}
+
+.postTitle{
+    font-weight: 700;
+}
+/* .postNav ul{
+    display: flex;
+    align-items: center;
+    height: 25%;
+    gap: 0.5rem;
+    flex: 0 0 5%;
+} */
+
+.postContent ul{
+    display: flex;
+    align-items: center;
+    height: 25%;
+    gap: 0.5rem;
+    flex: 0 0 5%;
+    margin-top: 1.5rem;
+}
+
+.postContent img { /* like, comment, share icons */
+    width: 30px;
+    height: auto;
+}
+
+.postContent ul .button-container{ /* holds the delete & edit buttons */
+    flex-direction: row;  
+}
+
+/* Create a post */
+dialog::backdrop{
+    backdrop-filter: blur(2px); /* Background is blurred when a dialog opens */
+}
+
+.createPostModal { /* Style the modal created. NOTE: You can't set this to display: flex otherwise it'll always show no matter what */
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+
+    width: 550px;
+    height: fit-content;
+    margin-top: 10px;
+    border-radius: 12px;
+    padding: 1rem;
+}
+
+.createPostModal .modalHeading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10%;
+    border-bottom: 1px solid black;
+    padding: 8px;
+}
+
+.createPostModal #closePostModal{
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    width: fit-content;
+    padding: 3px;
+
+    border: 1px solid #999;
+    box-shadow: 2px 2px #999;
+    border-radius: 12px;
+    background: var(--softRed);
+}
+
+.modalEnterText{ /* the form for submitting to db */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-items: flex-start;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    gap: 0.5rem;
+    height: 100%; /* DON'T CHANGE THIS. THE MODAL GETS DESTROYED IF SO */
+    width: 100%;
+}
+
+.modalEnterText input {
+    border-radius: 6px;
+    padding: 6px;
+    border: 1px solid var(--darkText);
+}
+
+.modalEnterText .options{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.modalEnterText #postContent{
+    width: 100%;
+    height: 200px;
+    resize: none;
+
+    border-radius: 6px;
+    padding: 6px;
+    border: 1px solid var(--darkText);
+}
+
+.modalEnterText .options select { /* Drop-down options */
+    background-color: white;
+    padding: 6px;
+    border-radius: 8px;
+    border: 1px solid var(--darkText);
+}
+
+
+.createPostModal .modalFooter{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 15%;
+    padding-top: 1rem;
+    border-top: 1px solid var(--darkText);
+}
+
+.createPostModal .modalFooter ul{
+    display: flex;
+    gap: 1rem;
+}
+
+.createPostModal .modalFooter img{
+    width: 40px;
+    height: auto;
+}
+
+#submitPostBtn{
+    /* Place at bottom right */
+    position: absolute;
+    bottom: -10;
+    right: 1rem;
+    background: #99e6ff;
+    border-radius: 12px;
+    width: fit-content;
+    padding: 6px;
+    border: 1px solid #999;
+    border: 1px solid #999;
+    box-shadow: 2px 2px #999;
+}
+/* Styles for the delete button */
+.delete-btn {
+    background-color: var(--mainBackround);
+    border: 2px solid var(--softRed);
+    color: var(--softRed);
+    text-align: center;
+    border-radius: 400px;
+    padding: 6px;   
+    margin-right: 10px;
+    cursor: pointer;
+    height: fit-content;
+    width: fit-content;
+}
+
+/* Styles for the edit button */
+.edit-btn {
+    background-color: var(--mainBackround);
+    border: 2px solid var(--acceptGreen);
+    color: var(--acceptGreen);
+    cursor: pointer;
+    border-radius: 500px;
+    padding: 6px;
+    height: fit-content;
+    width: fit-content;
+}
+.button-container {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.confirmation-dialog {
+    line-height: 2rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    background-color: var(--lightText);
+    border-radius: 8px;
+    padding: 20px;
+    border: 2px solid var(--niceGray);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+.confirmation-dialog #confirmDelete {
+    margin-right: 12px; /* Spaces out the "yes" and "no" buttons*/
+    width: 60px;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 4px;
+    background-color: var(--softRed);
+    cursor: pointer; /* Click = accept */
+}
+
+.confirmation-dialog #cancelDelete {
+    width: 60px;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 4px;
+    background-color: var(--lightText);
+    cursor: pointer; /* Click = accept */
+
+}
+.edit-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1001;
+    background-color: white;
+    border-radius: 8px;
+    border: 2px solid var(--darkText);
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: none;
+    width: 80%;
+    max-width: 500px;
+}
+
+.edit-modal textarea {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 100%;
+    min-height: 250px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid var(--niceGray);
+    resize: none;
+}
+
+.edit-modal button {
+    padding: 5px 15px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.edit-modal #saveChanges{ /* Save changes to post button */
+
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    color: white;
+    background-color: rgb(84, 105, 212);
+    box-shadow: rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 12%) 0px 1px 1px 0px, rgb(60 66 87 / 16%) 0px 0px 0px 1px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(60 66 87 / 8%) 0px 2px 5px 0px;
+    border-radius: 4px;
+    border-radius: 4px;
+    padding: 4px 8px;
+    display: inline-block;
+    height: 36px;
+
+}
+
+.edit-modal #cancelEdit{ /* Cancel changes to post button */
+
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    color: rgb(60, 66, 87);
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 12%) 0px 1px 1px 0px, rgb(60 66 87 / 16%) 0px 0px 0px 1px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(60 66 87 / 8%) 0px 2px 5px 0px;
+    border-radius: 4px;
+    padding: 4px 8px;
+    display: inline-block;
+    min-height: 36px;
+
+
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+}
+
+.modal-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/**** Comment Modal ****/
+#commentModal{
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    position: fixed;
+    width: 550px;
+    height: fit-content;
+    max-height: 600px;
+    margin-top: 10px;
+    border-radius: 12px;
+    
+}
+
+#commentList {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.comment-item {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 1px solid var(--darkText);
+    border-radius: 8px;
+    width: 95%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    overflow: hidden;
+}
+
+#commentList .comment-item .like-btn{ /* Liking a comment btn */
+    display: inline-block;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    background-color: #007BFF;
+    border-radius: 8px;
+    padding: 8px;
+    font-size: 0.75rem;
+    color: white;
+    line-height: 8px;
+    width: 50px;
+}
+
+.comment-input-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+
+
+    border: 0;
+    background: rgba(0, 0, 0, 0);
+    appearance: none;
+    width: 100%;
+    position: relative;
+    border-radius: 3px;
+    color: rgb(0, 0, 0);
+    font-weight: 400;
+    height: 40px;
+    transition: all .2s ease;
+    :hover{
+        box-shadow: 0 0 0 0 #fff inset, var(--acceptGreen) 0 0 0 2px;
+    }
+    :focus{
+        background: #fff;
+        outline: 0;
+        box-shadow: 0 0 0 0 #fff inset, var(--acceptGreen) 0 0 0 3px;
+    }
+
+}
+
+#userComment {
+    flex: 1;
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+}
+
+#submitCommentBtn {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: var(--lightText);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.close-btn {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    font-size: 24px;
+    cursor: pointer;
+}
+.friend-modal-close{
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    font-size: 24px;
+    cursor: pointer;
+}
+.friend-share-container{
+    max-width: 40%;
+    width: 100%;
+    margin: 80px auto 30px;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    position: fixed;
+    width: 450px;
+    height: fit-content;
+    margin-top: 10px;
+    border-radius: 12px;
+    border: 2px solid var(--darkText);
+    display: none;
+}
+.select-btn{
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.select-btn .btn-text{
+    font-size: 17px;
+    font-weight: 400;
+    color: #333;
+}
+.select-btn .arrow-dwn{
+    display: flex;
+    height: 21px;
+    width: 21px;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 50%;
+    background: #6e93f7;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+.select-btn.open .arrow-dwn{
+    transform: rotate(-180deg);
+}
+.list-items{
+    position: relative;
+    margin-top: 15px;
+    border-radius: 8px;
+    padding: 16px;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--niceGray);
+}
+
+.list-items .share-posts-btn{
+
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    font-weight: 500;
+    border-radius: 3px;
+    padding: 0 15px;
+    border-radius: 4px;
+    color: #6200ee;
+    background: transparent;
+    line-height: 1.15;
+    height: 36px;
+    min-width: 64px;
+    border: 1px solid #6200ee;
+    text-align: center;
+
+}
+.select-btn.open ~ .list-items{
+    display: block;
+}
+.list-items .item{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    height: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 0 15px;
+    border-radius: 8px;
+}
+.list-items .item:hover{
+    background-color: #e7edfe;
+}
+.item .item-text{
+    font-size: 16px;
+    font-weight: 400;
+    color: #333;
+}
+.item .checkbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 16px;
+    width: 16px;
+    border-radius: 4px;
+    margin-right: 12px;
+    border: 1.5px solid #c0c0c0;
+    transition: all 0.3s ease-in-out;
+}
+.item.checked .checkbox{
+    background-color: #4070f4;
+    border-color: #4070f4;
+}
+.checkbox .check-icon{
+    color: #fff;
+    font-size: 11px;
+    transform: scale(0);
+    transition: all 0.2s ease-in-out;
+}
+.item.checked .check-icon{
+    transform: scale(1);
+}
+
+.add-image-btn{
+    background-color: var(--mainBackround);
+    border: 2px solid rgb(70, 169, 255);
+    color: rgb(70, 169, 255);
+    text-align: center;
+    border-radius: 400px;
+    padding: 6px;   
+    margin-right: 10px;
+    cursor: pointer;
+    height: fit-content;
+    width: fit-content;
+}
+
