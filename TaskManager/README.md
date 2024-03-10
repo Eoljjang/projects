@@ -8,4 +8,7 @@ This is a concept design for an IOS mobile application for a task manager. Featu
 https://youtu.be/lvd3Bzq8Sdc
 
 # Design Frames
-![https://github.com/Eoljjang/projects/blob/main/TaskManager/frames/homepage.png]
+![Homepage](https://github.com/Eoljjang/projects/blob/main/TaskManager/frames/homepage.png)
+![ListExample](https://github.com/Eoljjang/projects/blob/main/TaskManager/frames/listExample.png)
+![Calendar](https://github.com/Eoljjang/projects/blob/main/TaskManager/frames/calendar.png)
+![CreateDeleteLists](https://github.com/Eoljjang/projects/blob/main/TaskManager/frames/create_delete_lists.png)
