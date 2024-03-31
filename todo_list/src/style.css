@@ -58,7 +58,7 @@ hr{ /* have to override default hr styles */
     box-shadow: var(--light-blue) 4px 4px 0 0,black 4px 4px 0 1px;
     padding: 10px 20px;
     transition: transform 0.2s;
-    width: 35%;
+    width: 45%;
     height: fit-content;
     text-align: center;
     padding: 28px 0px;
@@ -129,14 +129,15 @@ hr{ /* have to override default hr styles */
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 35%;
+    width: 45%;
     gap: 24px;
 }
 
 .task-item{
     display: flex;
-    justify-content: space-around;
+    gap: 24px;
     align-items: center;
+    justify-content: center;
     width: 100%;
 }
 
@@ -144,7 +145,7 @@ hr{ /* have to override default hr styles */
     background-color: var(--light-gray);
     font-size: 18px;
     font-family: inherit;
-    width: 70%;
+    width: 75%;
     padding: 16px 14px;
     border-radius: 16px;
     border: none;
