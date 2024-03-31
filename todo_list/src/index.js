@@ -2,12 +2,11 @@ import './style.css';
 let timer;
 let minutes = 25; // Defaults to 25 minutes.
 let seconds = 0;
-let isPaused = false;
+let isPaused = true; // By default, the timer is "paused".
 let enteredTime = null; // User has not entered a specific time frame.
-const toggle_pause_btn = document.querySelector("#toggle-pause-btn");
 const restart_timer_btn = document.querySelector("#restart-timer-btn");
 const choose_time_btn = document.querySelector("#choose-time-btn");
-const start_timer_btn = document.querySelector("#start-timer-btn");
+const toggle_timer_btn = document.querySelector("#toggle-timer-btn");
 const pomodoro = document.querySelector(".pomodoro-timer");
 
 
@@ -48,24 +47,22 @@ function formatTime(minutes, seconds){
     return `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`; 
 }
 
-// WHEN START TIMER BUTTON IS CLICKED
-start_timer_btn.addEventListener("click", () => {
-    startTimer();
-    start_timer_btn.remove();
-})
-
-// WHEN PAUSE BUTTON IS CLICKED
-toggle_pause_btn.addEventListener("click", () => {
+// WHEN TOGGLE BUTTON IS CLICKED (toggles between 'started' and 'paused' modes).
+toggle_timer_btn.addEventListener("click", () => {
     // Take the negated value since it's a toggle. IE: switch between pause and unpaused.
     isPaused = !isPaused;
 
     if (isPaused){
         clearInterval(timer); // Stop updating the timer.
-        toggle_pause_btn.textContent = 'Resume'; // Change the text to say 'resume' instead.
+        toggle_timer_btn.textContent = 'Start'; 
+        toggle_timer_btn.style.backgroundColor = "#6af1a3"; // start = green;
     }
     else{ // Unpausing
         startTimer();
-        toggle_pause_btn.textContent = "Pause";
+        toggle_timer_btn.textContent = "Pause";
+        console.log('paused');
+        toggle_timer_btn.style.backgroundColor = "#ff7a61"; // pause = red.
+        
     }
 })
 
@@ -74,13 +71,14 @@ restart_timer_btn.addEventListener("click", () => {
     clearInterval(timer); // Stop updating the timer.
     minutes = enteredTime || 25; // Either sets it to the user inputted time, or default 25 minutes.
     seconds = 0;
-    isPaused = false;
+    isPaused = true;
 
     // Reset everything about the timer
     const timerElement = document.querySelector("#timer");
     timerElement.textContent = formatTime(minutes, seconds);
-    const toggle_pause_btn = document.querySelector("#toggle-pause-btn");
-    toggle_pause_btn.textContent = 'Pause'; // Make sure it says 'pause' again.
+
+    toggle_timer_btn.textContent = 'Start'; 
+    toggle_timer_btn.style.backgroundColor = "#6af1a3"; // set start = green.
 })
 
 // WHEN CHOOSE TIME BUTTON IS CLICKED
@@ -91,15 +89,15 @@ choose_time_btn.addEventListener("click", () => {
         enteredTime = parseInt(newTime); // Convert user input to integer.
         minutes = enteredTime;
         seconds = 0;
-        isPaused = false;
+        isPaused = true;
 
         const timerElement = document.querySelector("#timer");
         timerElement.textContent = formatTime(minutes, seconds);
         clearInterval(timer); // Get rid of any old updates.
 
-        const toggle_pause_btn = document.querySelector("#toggle-pause-btn");
-        toggle_pause_btn.textContent = 'Pause';
-        
+        // Make sure the start button is green again.
+        toggle_timer_btn.textContent = 'Start';
+        toggle_timer_btn.style.backgroundColor = "#6af1a3";
     }
     else{
         alert("Invalid input. Must be a number greater than 0.");

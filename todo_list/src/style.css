@@ -53,7 +53,7 @@ hr{ /* have to override default hr styles */
     padding: 10px 20px;
     transition: transform 0.2s;
     width: 35%;
-    height: 200px;
+    height: fit-content;
     text-align: center;
     padding: 28px 0px;
 }
@@ -76,6 +76,7 @@ hr{ /* have to override default hr styles */
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 24px;
 }
 
@@ -88,6 +89,13 @@ hr{ /* have to override default hr styles */
     background: white;
     border: 2px solid black;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+    /* animation */
+    transition: transform .2s;
+}
+
+.timer-controls button:hover{
+    transform: scale(1.25);
 }
 
 .button-disabled{
@@ -95,9 +103,13 @@ hr{ /* have to override default hr styles */
     background-color: #d5d5d5;
 }
 
-#start-timer-btn{
-    background-color: #6af1a3
+#toggle-timer-btn{
+    background-color: #6af1a3;
 }
+
+/* .toggle-timer-btn-paused{
+    background-color: red;
+} */
 
 /* TASK LIST */
 
@@ -113,11 +125,14 @@ hr{ /* have to override default hr styles */
 
     border: 2px solid black;
     box-shadow: var(--light-blue) 4px 4px 0 0,black 4px 4px 0 1px;
+
+    transition: transform .2s;
 }
 
 #add-task-btn:hover{
     background: var(--light-blue);
     box-shadow: white 4px 4px 0 0,black 4px 4px 0 1px;
+    transform: scale(1.25);
 }
 
 
