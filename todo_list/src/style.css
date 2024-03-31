@@ -124,6 +124,44 @@ hr{ /* have to override default hr styles */
 } */
 
 /* TASK LIST */
+#task-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 35%;
+    gap: 24px;
+}
+
+.task-item{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.task-text{ /* Task input field */
+    background-color: var(--light-gray);
+    font-size: 18px;
+    font-family: inherit;
+    width: 70%;
+    padding: 16px 14px;
+    border-radius: 16px;
+    border: none;
+    border-left: 8px solid var(--start-green);
+}
+
+.task-text:focus{ /* Selecting a task input field */
+    outline: none;
+    border: 1px solid var(--light-blue);
+}
+
+.task-checkbox{
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
+    background-color: var(--light-gray);
+}
 
 /* ADD TASK BUTTON */
 #add-task-btn{
