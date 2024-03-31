@@ -10,6 +10,8 @@ const choose_time_btn = document.querySelector("#choose-time-btn");
 const toggle_timer_btn = document.querySelector("#toggle-timer-btn");
 const pomodoro = document.querySelector(".pomodoro-timer");
 const timer_circle = document.querySelector(".timer-circle");
+const add_task_btn = document.querySelector("#add-task-btn");
+const task_container = document.querySelector("#task-container");
 
 
 function startTimer() {
@@ -138,9 +140,27 @@ function storageAvailable(type) {
     }
   }
 
-if (storageAvailable){
-    console.log("available");
-}
-else{
-    console.log('too bad');
+// ADDING TASKS //
+add_task_btn.addEventListener("click", () =>{
+    add_task();
+})
+
+function add_task(){
+    // 1) create task item div
+    const task_item = document.createElement("div");
+    task_item.classList.add("task-item");
+
+    // 2) Add the input field.
+    const task_input = document.createElement("input");
+    task_input.classList.add("task-text");
+    task_item.appendChild(task_input);
+
+    // 3) Add the checkbox field.
+    const task_checkbox = document.createElement("input");
+    task_checkbox.type = 'checkbox';
+    task_checkbox.classList.add("task-checkbox");
+    task_item.appendChild(task_checkbox);
+
+    // 4) Add the task item into the task container
+    task_container.appendChild(task_item);
 }
