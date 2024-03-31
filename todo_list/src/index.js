@@ -83,6 +83,7 @@ restart_timer_btn.addEventListener("click", () => {
 
     toggle_timer_btn.textContent = 'Start'; 
     toggle_timer_btn.style.backgroundColor = "#6af1a3"; // set start = green.
+    timer_circle.style.borderColor = "#6af1a3"; 
 })
 
 // WHEN CHOOSE TIME BUTTON IS CLICKED
