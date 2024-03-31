@@ -102,6 +102,7 @@ choose_time_btn.addEventListener("click", () => {
         // Make sure the start button is green again.
         toggle_timer_btn.textContent = 'Start';
         toggle_timer_btn.style.backgroundColor = "#6af1a3";
+        timer_circle.style.borderColor = "#6af1a3";
     }
     else{
         alert("Invalid input. Must be a number greater than 0.");
