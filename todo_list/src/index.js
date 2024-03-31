@@ -4,10 +4,12 @@ let minutes = 25; // Defaults to 25 minutes.
 let seconds = 0;
 let isPaused = true; // By default, the timer is "paused".
 let enteredTime = null; // User has not entered a specific time frame.
+let stop_red = "#ff7a61";
 const restart_timer_btn = document.querySelector("#restart-timer-btn");
 const choose_time_btn = document.querySelector("#choose-time-btn");
 const toggle_timer_btn = document.querySelector("#toggle-timer-btn");
 const pomodoro = document.querySelector(".pomodoro-timer");
+const timer_circle = document.querySelector(".timer-circle");
 
 
 function startTimer() {
@@ -56,12 +58,14 @@ toggle_timer_btn.addEventListener("click", () => {
         clearInterval(timer); // Stop updating the timer.
         toggle_timer_btn.textContent = 'Start'; 
         toggle_timer_btn.style.backgroundColor = "#6af1a3"; // start = green;
+        timer_circle.style.borderColor = "#6af1a3";
     }
     else{ // Unpausing
         startTimer();
         toggle_timer_btn.textContent = "Pause";
         console.log('paused');
         toggle_timer_btn.style.backgroundColor = "#ff7a61"; // pause = red.
+        timer_circle.style.borderColor = "#ff7a61";
         
     }
 })
