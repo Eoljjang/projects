@@ -14,6 +14,37 @@ const add_task_btn = document.querySelector("#add-task-btn");
 const task_container = document.querySelector("#task-container");
 const checkboxes = document.querySelector(".task-checkbox");
 
+// LOCAL STORAGE //
+const savedTodos = JSON.parse(localStorage.getItem("todos")) || []; // Retrieves local storage todo OR creates empty array if none exist
+
+// At the beginning, populate the array with any localStorage items //
+function populate(){
+    for (var i = 0; i < savedTodos.length; i++){
+        var todo = savedTodos[i]; 
+
+        // 1) create task item div
+        const task_item = document.createElement("div");
+        task_item.classList.add("task-item");
+
+        // 2) Add the input field.
+        const task_input = document.createElement("input");
+        task_input.classList.add("task-text");
+        task_input.value = todo.task; // Extract the "tasK" field from the JSON object.
+        task_item.appendChild(task_input);
+
+        // 3) Add the checkbox field.
+        const task_checkbox = document.createElement("input");
+        task_checkbox.type = 'checkbox';
+        task_checkbox.classList.add("task-checkbox");
+        task_checkbox.checked = todo.checked; // Set the state of "checked" from the JSON object.
+        task_item.appendChild(task_checkbox);
+
+        // 4) add it into the task container.
+        task_container.appendChild(task_item);
+    }
+}
+populate();
+
 
 function startTimer() {
     // Every second, calls the updateTimer() function. 
@@ -164,4 +195,9 @@ function add_task(){
 
     // 4) Add the task item into the task container
     task_container.appendChild(task_item);
+
+    // 5.1) Add the new todo to the todos array.
+    savedTodos.push({task: task_input.value, task_checkbox: task_checkbox.checked});
+    // 5.2) Converts object to string and stores locally.
+    localStorage.setItem("todos", JSON.stringify(savedTodos));
 }
