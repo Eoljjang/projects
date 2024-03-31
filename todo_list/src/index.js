@@ -12,6 +12,7 @@ const pomodoro = document.querySelector(".pomodoro-timer");
 const timer_circle = document.querySelector(".timer-circle");
 const add_task_btn = document.querySelector("#add-task-btn");
 const task_container = document.querySelector("#task-container");
+const checkboxes = document.querySelector(".task-checkbox");
 
 
 function startTimer() {
