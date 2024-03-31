@@ -8,19 +8,24 @@ let stop_red = "#ff7a61";
 const restart_timer_btn = document.querySelector("#restart-timer-btn");
 const choose_time_btn = document.querySelector("#choose-time-btn");
 const toggle_timer_btn = document.querySelector("#toggle-timer-btn");
-const pomodoro = document.querySelector(".pomodoro-timer");
 const timer_circle = document.querySelector(".timer-circle");
 const add_task_btn = document.querySelector("#add-task-btn");
 const task_container = document.querySelector("#task-container");
-const checkboxes = document.querySelector(".task-checkbox");
+//const save_tasks_btn = document.querySelector("#save-tasks-btn");
 
 // LOCAL STORAGE //
-const savedTodos = JSON.parse(localStorage.getItem("todos")) || []; // Retrieves local storage todo OR creates empty array if none exist
+const savedTasks = JSON.parse(localStorage.getItem("tasks")) || []; // Retrieves local storage todo OR creates empty array if none exist
+
+// ON CLICKS //
+add_task_btn.addEventListener("click", () =>{
+    add_task();
+})
+
 
 // At the beginning, populate the array with any localStorage items //
 function populate(){
-    for (var i = 0; i < savedTodos.length; i++){
-        var todo = savedTodos[i]; 
+    for (var i = 0; i < savedTasks.length; i++){
+        var todo = savedTasks[i]; 
 
         // 1) create task item div
         const task_item = document.createElement("div");
@@ -38,6 +43,15 @@ function populate(){
         task_checkbox.classList.add("task-checkbox");
         task_checkbox.checked = todo.checked; // Set the state of "checked" from the JSON object.
         task_item.appendChild(task_checkbox);
+
+        // 3.1) Add the delete button
+        const delete_btn = document.createElement("button");
+        delete_btn.classList.add("delete-task-btn");
+        delete_btn.textContent = "X";
+        delete_btn.addEventListener("click", () =>{
+            task_item.remove();
+        })
+        task_item.appendChild(delete_btn);
 
         // 4) add it into the task container.
         task_container.appendChild(task_item);
@@ -173,10 +187,6 @@ function storageAvailable(type) {
   }
 
 // ADDING TASKS //
-add_task_btn.addEventListener("click", () =>{
-    add_task();
-})
-
 function add_task(){
     // 1) create task item div
     const task_item = document.createElement("div");
@@ -193,11 +203,47 @@ function add_task(){
     task_checkbox.classList.add("task-checkbox");
     task_item.appendChild(task_checkbox);
 
+    // 3.1) Add the delete button
+    const delete_btn = document.createElement("button");
+    delete_btn.textContent = "X";
+    delete_btn.classList.add("delete-task-btn");
+
+    delete_btn.addEventListener("click", () =>{
+        task_item.remove() // Removes the associated task item.
+    })
+
+    task_item.appendChild(delete_btn);
+
     // 4) Add the task item into the task container
     task_container.appendChild(task_item);
-
-    // 5.1) Add the new todo to the todos array.
-    savedTodos.push({task: task_input.value, task_checkbox: task_checkbox.checked});
-    // 5.2) Converts object to string and stores locally.
-    localStorage.setItem("todos", JSON.stringify(savedTodos));
 }
+
+// SAVING TASKS TO LOCAL STORAGE //
+// save_tasks_btn.addEventListener("click", () => {
+//     save_tasks();
+// })
+
+// function save_tasks(){
+//     const task_container = document.querySelector("#task-container");
+
+//     let tasks = [];
+//     var i = 0;
+//     task_container.querySelectorAll(".task-item").forEach(taskItem =>{
+//         // Get the text & checkbox values.
+//         const taskText = taskItem.querySelector(".task-text").value;
+//         const isChecked = taskItem.querySelector(".task-checkbox").checked;
+
+//         // Create the JSON object.
+//         const task = {
+//             task: taskText,
+//             checked: isChecked
+//         };
+
+//         // Add object to array
+//         tasks.push(task);
+//         i++;
+//     });
+
+//     // Save tasks to local storage.
+//     localStorage.setItem("tasks", JSON.stringify(tasks));
+// }

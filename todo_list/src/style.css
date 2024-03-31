@@ -157,6 +157,15 @@ hr{ /* have to override default hr styles */
     border: 1px solid var(--light-blue);
 }
 
+.delete-task-btn{
+    background: var(--stop-red);
+    border: none;
+    padding: 8px;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+}
+
 [type=checkbox] {
     width: 3rem;
     height: 3rem;
@@ -197,7 +206,7 @@ hr{ /* have to override default hr styles */
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E %3Cpath d='M15.88 8.29L10 14.17l-1.88-1.88a.996.996 0 1 0-1.41 1.41l2.59 2.59c.39.39 1.02.39 1.41 0L17.3 9.7a.996.996 0 0 0 0-1.41c-.39-.39-1.03-.39-1.42 0z' fill='%23fff'/%3E %3C/svg%3E");
   }
 
-/* ADD TASK BUTTON */
+/* ADD / SAVE TASK BUTTON */
 #add-task-btn{
     font-family: inherit; /* Ensures we use the imported font */
     width: 150px;
@@ -216,5 +225,27 @@ hr{ /* have to override default hr styles */
 #add-task-btn:hover{
     transform: scale(1.15);
 }
+
+#save-tasks-btn{
+    font-family: inherit; /* Ensures we use the imported font */
+    width: 150px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border-radius: 20px;
+    background: var(--light-gray);
+    font-size: larger;
+    margin-bottom: 24px; /* Add some space to the bottom of the page. */
+
+    border: 2px solid black;
+    box-shadow: var(--light-blue) 4px 4px 0 0,black 4px 4px 0 1px;
+
+    transition: transform .2s;
+}
+
+#save-tasks-btn:hover{
+    transform: scale(1.15);
+}
+
+
 
 
